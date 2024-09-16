@@ -66,7 +66,7 @@ def get_selection(month, day, selection):
     yVal = []
     xSelected = []
     colorVal = [
-        "#F4EC15", "#DAF017", "#BBEC19", "#9DE81B", "#80E41D",
+        "#F4EC15", "#DAF017", "#BBEC19", "#9De81B", "#80E41D",
         "#66E01F", "#4CDC20", "#34D822", "#24D249", "#25D042",
         "#26CC58", "#28C86D", "#29C481", "#2AC093", "#2BBCA4",
         "#2BB5B8", "#2C99B4", "#2D7EB0", "#2D65AC", "#2E4EA4",
@@ -390,7 +390,7 @@ def update_graph(datePicked, selectedData, selectedLocation):
                         [0, "#F4EC15"],
                         [0.04167, "#DAF017"],
                         [0.0833, "#BBEC19"],
-                        [0.125, "#9DE81B"],
+                        [0.125, "#9De81B"],
                         [0.1667, "#80E41D"],
                         [0.2083, "#66E01F"],
                         [0.25, "#4CDC20"],
@@ -473,5 +473,7 @@ def update_graph(datePicked, selectedData, selectedLocation):
     )
 
 
+import uvicorn
+
 if __name__ == "__main__":
-    server.run(debug=True)
+    uvicorn.run(app, host="8000")
